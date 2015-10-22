@@ -1,0 +1,31 @@
+<div ng-controller="HomeController as vm">
+	<div class="well container" ng-repeat="p in vm.posts">
+		<div class="row">
+			<div class="col-sm-3">
+				<img ng-src="{{p.url}}" ng-alt="{{p.title}}" />
+			</div>
+			<div class="col-sm-9">
+				<h3><a ui-sref="PostDetails({id: p._id})">{{p.title}}</a></h3>
+				<h4>{{p.description}}</h4>
+			</div>
+		</div>
+		<button class="btn btn-warning" ng-click="showEdit = true">Edit</button>
+		<button type="button" class="btn btn-danger" ng-click="vm.deletePost(p)">Delete</button>
+
+		<form ng-init="edittedPost = vm.getCopy(p)" ng-show="showEdit"
+		 ng-submit="vm.editPost(p._id, edittedPost); showEdit = false;" >
+			<label>Title</label>
+			<input class="form-control"  ng-model="edittedPost.title" required>
+			<label>Description</label>
+			<textarea class="form-control"  ng-model="edittedPost.description" required></textarea>
+			<label>Image Url</label>
+			<input class="form-control"  ng-model="edittedPost.url" required>
+			<div style="text-align: center;">
+				<button type="button" class="btn btn-danger" ng-click="showEdit = false;">Cancel</button>
+				<button type="submit" class="btn btn-success">Submit</button>
+			</div>
+		</form>
+
+	</div>
+
+</div>

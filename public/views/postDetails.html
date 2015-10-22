@@ -1,0 +1,41 @@
+<div ng-controller="PostDetailsController as vm">
+  <br>
+  <div class="row">
+    <div class="well container">
+      <div class="col-sm-3">
+        <img ng-src="{{vm.detail.url}}" ng-alt="{{vm.detail.title}}" />
+      </div>
+      <div class="col-sm-9">
+        <h1>Details</h1>
+        <h3>{{vm.detail.title}}</h3>
+        <h4>{{vm.detail.description}}</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="well container">
+    <ul>
+      <h2>Comments: </h2>
+      <li ng-repeat="c in vm.detail.comments">{{c.body}} - {{c.user}}</li>
+    </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="well container form-inline" ng-show="addingComment" style="text-align: center">
+      <input class="form-control" ng-model="vm.comment.body" placeholder="Comment">
+      <label>Rating: </label><select class="form-control" ng-model="vm.comment.rating">
+        <option value="5">5</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1</option>
+      </select>
+      <button type="button" class="btn btn-success" ng-click="addingComment = false; vm.addComment()">Submit</button>
+      <button type="button" class="btn btn-danger" ng-click="addingComment = false;">Cancel</button>
+    </div>
+    <div class="well container" ng-show="!addingComment && nav.status.username" style="text-align: center">
+      <button type="button" class="btn btn-info" ng-click="addingComment = true;">Add Comment</button>
+
+    </div>
+  </div>
+</div>
