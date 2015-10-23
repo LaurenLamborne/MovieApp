@@ -1,0 +1,13 @@
+<div ng-controller="CreatePostController as vm">
+  <form class="well container" ng-submit="vm.createPost()">
+    <label>Title</label>
+    <input class="form-control" placeholder="Title..." ng-model="vm.post.title" required>
+    <label>Description</label>
+    <textarea class="form-control" placeholder="Description.." ng-model="vm.post.description" required></textarea>
+    <label>Image Url</label>
+    <input class="form-control" placeholder="Image Url..." ng-model="vm.post.url" required>
+    <div style="text-align: center;">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
