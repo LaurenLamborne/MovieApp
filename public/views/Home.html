@@ -13,7 +13,7 @@
 		<button class="btn btn-warning" ng-click="showEdit = true">Edit</button>
 		<button type="button" class="btn btn-danger" ng-click="vm.deletePost(p)">Delete</button>
 		</div>
-
+		
 		<form ng-init="edittedPost = vm.getCopy(p)" ng-show="showEdit"
 		 ng-submit="vm.editPost(p._id, edittedPost); showEdit = false;" >
 			<label>Title</label>

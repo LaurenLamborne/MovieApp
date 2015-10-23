@@ -1,0 +1,10 @@
+{
+  "ignore": [
+  "gulpfile.js",
+  "package.json",
+  "bower.json",
+  ".gitignore",
+  "public/",
+  "dist/"
+  ]
+}

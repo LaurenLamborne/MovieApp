@@ -4,7 +4,7 @@
   "description": "An application for the Coder Camps FullStack JS course",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -19,5 +19,12 @@
     "passport": "^0.3.0",
     "passport-local": "^1.0.0",
     "ui-router": "^0.2.15"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-beautify": "^2.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-uglify": "^1.4.2"
   }
 }
