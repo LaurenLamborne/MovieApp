@@ -6,9 +6,9 @@
         <img ng-src="{{vm.detail.url}}" ng-alt="{{vm.detail.title}}" />
       </div>
       <div class="col-sm-9">
-        <h1>Details</h1>
         <h3>{{vm.detail.title}}</h3>
         <h4>{{vm.detail.description}}</h4>
+        <a class="btn btn-primary" ui-sref="Home">HOME</a>
       </div>
     </div>
   </div>
@@ -16,7 +16,13 @@
     <div class="well container">
     <ul>
       <h2>Comments: </h2>
-      <li ng-repeat="c in vm.detail.comments">{{c.body}} - {{c.user}}</li>
+      <li ng-repeat="c in vm.detail.comments">
+        <span style="font-size: 20px;">{{c.body}}</span>
+        <br>
+        Rating: {{c.rating}}
+        <br>
+         User: {{c.user}}
+     </li>
     </ul>
     </div>
   </div>

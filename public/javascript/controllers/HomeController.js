@@ -11,10 +11,11 @@
 			vm.posts = res;
 		});
 
-		vm.editPost = function(postId) {
-		HomeFactory.editPost({IDofPostToEdit: postId, postEditted: vm.edittedPost}).then(function(res) {
+		vm.editPost = function(postId, edittedPost) {
+		HomeFactory.editPost({IDofPostToEdit: postId, postEditted: edittedPost}).then(function(res) {
 			console.log("Made it back");
 			console.log(res);
+			// vm.edittedPost = res;
 			vm.edittedPost = null;
 			// vm.showEdit = false;
 

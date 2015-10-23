@@ -13,6 +13,7 @@
 
 		vm.addComment = function() {
 			HomeFactory.createComment(vm.comment, $stateParams.id).then(function(res) {
+				vm.detail = res;
 				console.log(res);
 			});
 		};
