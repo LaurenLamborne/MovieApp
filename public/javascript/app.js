@@ -11,7 +11,7 @@
 			templateUrl: 'views/login_register.html'
 		}).state('CreatePost', {
 			url: '/create',
-			templateUrl: 'views/CreatePost.html'
+			templateUrl: 'views/createPost.html'
 		}).state('PostDetails', {
 			url: '/post/:id',
 			templateUrl: 'views/postDetails.html'
