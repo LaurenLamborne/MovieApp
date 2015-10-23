@@ -17,6 +17,7 @@
 			templateUrl: 'views/postDetails.html'
 		});
 		$urlRouterProvider.otherwise('/');
+		console.log($httpProvider);
 		$httpProvider.interceptors.push('AuthInterceptor');
 	}
 })();

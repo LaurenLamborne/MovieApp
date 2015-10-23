@@ -12,7 +12,6 @@ require('./models/User');
 require('./models/Post');
 require('./config/passport');
 // mongoose.connect('mongodb://localhost/Posts');
-// 'mongodb://laurenlamborne:123@ds041934.mongolab.com:41934/post'
 mongoose.connect(process.env.MONGO_STRING);
 
 app.set('views', path.join(__dirname, 'views'));
